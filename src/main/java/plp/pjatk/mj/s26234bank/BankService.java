@@ -71,22 +71,4 @@ public class BankService {
         return bankStorage.getBankerList();
     }
 
-    public String getBankerStatusOfId(int id) {
-        Banker banker = bankStorage.getBankerById(id);
-        return (banker != null) ? banker.getStatus() : "Client not found";
-    }
-
-    public String setBankerStatusOfId(int id, String status) {
-        Banker banker = bankStorage.getBankerById(id);
-        if (banker != null) {
-            return banker.setStatus(status);
-        } else {
-            return "Client not found";
-        }
-    }
-
-    public double getBankerSaldoOfId(int id) {
-        Banker banker = bankStorage.getBankerById(id);
-        return (banker != null) ? banker.getSaldo() : 0.0;
-    }
 }
